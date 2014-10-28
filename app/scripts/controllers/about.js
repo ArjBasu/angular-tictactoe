@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the App
  */
-angular.module('App')
+angular.module('TicTacToe')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
