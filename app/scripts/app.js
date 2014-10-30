@@ -14,7 +14,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,7 +24,7 @@ angular
       })
       .when('/game', {
         templateUrl: 'views/game.html',
-        controller: 'GameController'
+        controller: 'BoardController'
       })
       .otherwise({
         redirectTo: '/'

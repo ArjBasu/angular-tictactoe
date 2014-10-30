@@ -1,0 +1,34 @@
+
+<div id = "topSection" ng-style="getWidth">
+  <span id = "turn">Player {{player}}</span>
+  <btn class = "btn btn-lg btn-info pull-right" ng-click="reset()"><span class ="glyphicon glyphicon-repeat"></span></btn>
+</div>
+
+
+<div id = "gameBackground" ng-style="getWidth">
+    <div class = "row" ng-repeat="row in gameBoard track by $index">
+      <div class = "cell" ng-repeat="col in row track by $index" ng-class = "getClasses(col)" ng-click="move($parent.$index,$index)">
+        <span class = "cellContent" ng-show="col">{{col}}</span>
+
+        <span class = "cellContent" ng-show="!col && player == 1">
+          X
+        </span>
+
+        <span class = "cellContent" ng-show = "!col && player == 2">
+          O
+        </span>
+      </div>
+
+    </div>
+
+
+  </div>
+
+<div id = "winDialog" ng-show="checkWinDraw()">
+  <div id = "winText">
+    <span class = "text" ng-show="result === 'win'">Player {{player}} wins!!</span>
+    <span class = "text" ng-show="result === 'draw'">It's a draw !!</span>
+    <btn class = "btn btn-primary btn-block btn-lg" ng-click = "playAgain()">Play Again</btn>
+  </div>
+</div>
+

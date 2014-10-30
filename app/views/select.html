@@ -1,7 +1,11 @@
 <div id = "selectionBg">
   <div id = "selectionBox">
-    <span id = "loginHeader">Please select the grid size
-      <span slider ng-model="sliders.secondSliderValue" min="{{minTest}}" slider-id="{{idTest}}"></span>
-    <a href="#game" class = "btn btn-lg btn-primary btn-block">Start</a>
+    <span id = "loginHeader">Please select a Grid size
+
+      <form id="gridSizeForm" name="gridSizeForm" ng-submit="startGame()">
+        <input name="gridSize" ng-model="gridSize" id = "gridSize" type="number" name="quantity" min="3" max="100"  ng-init="gridSize=3">
+        <input  class = "btn btn-lg btn-primary btn-block" type = "submit" value = "Start" id="start">
+      </form>
+
   </div>
 </div>

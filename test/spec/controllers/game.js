@@ -68,15 +68,6 @@ describe('GameProvider', function () {
     expect(gameService.gameBoard[0][0]).toBe('X');
   });
 
-  it('The setMove method should call the checkWin method automatically',function(){
-    spyOn(gameService,'checkWin');
-
-    gameService.setMove(1,0,0);
-
-    expect(gameService.checkWin).toHaveBeenCalledWith(0,0);
-
-  });
-
   it('Verify that that the checkWin function works properly',function(){
     gameService.gameBoard[0][0] = gameService.gameBoard[0][1] = gameService.gameBoard[0][2] = 'X';
     expect(gameService.checkWin(0,0)).toBe(true);

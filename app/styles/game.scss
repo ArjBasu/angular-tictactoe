@@ -1,0 +1,169 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+body{
+  font-family: 'Roboto',sans-serif;
+}
+
+#selectionBg{
+  width:100vw;
+  height:100vh;
+  background-color: #EFEFEF;
+}
+
+#selectionBox{
+  width:400px;
+  height:200px;
+  position:absolute;
+  background-color: white;
+  margin:auto;
+  top:0;left:0;right:0;bottom:0;
+  border-radius:5px;
+  padding:20px;
+  text-align: center;
+}
+
+#loginHeader{
+  font-size:30px;
+
+
+  font-weight: bold;
+}
+
+#gameBackground{
+  background-color: #bbada0;
+  box-sizing: border-box;
+  margin:auto;
+  border-radius:5px;
+  padding:40px;
+  max-width:80vw;
+  max-height:80vh;
+  overflow: auto;
+
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.cell{
+  min-width:60px;
+  max-width:60px;
+  margin:0 0 7px 7px;
+  float:left;
+  box-sizing:border-box;
+  border-radius:3px;
+  font-family: "Nunito",sans-serif;
+}
+
+
+.filledCell{
+  color:white;
+}
+
+.cellX{
+  background-color:#f59563;
+}
+
+
+
+.cellY{
+  background-color:#edcf72;
+}
+
+.blankCell{
+  background: rgba(238, 228, 218, 0.35);
+  cursor:pointer;
+  color:rgba(238, 228, 218, 0);
+  transition:color 0.1s ease-in-out;
+
+}
+
+
+
+.blankX:hover{
+  //background-color:#f59563;
+  color:rgba(255,255,255,0.4);
+}
+
+.blankY:hover{
+  color:white;
+  color:rgba(255,255,255,0.4);
+  //background-color:#edcf72;
+}
+
+.blankCell:hover{
+
+}
+
+.cellContent{
+  font-size:48px;
+  line-height: 60px;
+  display:block;
+  text-align: center;
+}
+
+#topSection{
+  width:80vw;
+  min-width:90vw;
+  background-color: #EFEFEF;
+  overflow: auto;
+  border-radius:5px;
+  padding:15px;
+  margin:10px auto 15px auto;
+
+}
+
+#turn{
+  font-size: 32px;
+  font-weight:bold;
+  font-family: 'Roboto',sans-serif;
+}
+
+#winDialog{
+  display:flex;
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background-color: rgba(238, 228, 218, 0.80);
+  width:100vw;
+  height:100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#winText{
+  width:420px;
+}
+
+
+
+#winText .text{
+  font-size:63px;
+  font-family: "Lato",sans-serif;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+#winText .btn{
+  margin-top:20px;
+}
+
+#gridSize{
+  border-radius: 4px;
+  width:75px;
+}
+
+
+#gridSizeForm{
+  margin-top:10px;
+}
+
+#start{
+  margin-top:25px;
+}
