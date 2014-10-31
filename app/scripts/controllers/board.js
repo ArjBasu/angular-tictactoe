@@ -8,8 +8,11 @@
  * Controller of the App
  */
 angular.module('TicTacToe')
-  .controller('BoardController', function ($rootScope,$scope,gameProvider) {
+  .controller('BoardController', function ($rootScope,$scope,gameProvider,$location) {
 
+    if(typeof $rootScope.gridSize === 'undefined' ){
+      $location.url('/');
+    }
 
     /** This function is used to decide which classes are to be applied to each cell via ng-class directive.
      * The blankCell class is to be applied when the cell is empty
@@ -54,6 +57,7 @@ angular.module('TicTacToe')
      * @type {Array}
      */
     $scope.gameBoard = gameProvider.gameBoard;
+
 
     /**
      * This variable keeps track of the play state. Possible values are 'playing','win','draw'. This is used to display
