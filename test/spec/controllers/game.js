@@ -110,6 +110,18 @@ describe('GameProvider', function () {
     expect(gameService.checkWin(0,0)).toBe(false);
   });
 
+  it('The checkEmpty function should be working properly',function(){
+    expect(gameService.checkEmpty()).toBe(true);
+    for(var i = 0; i < SIZE; i++){
+      for(var j = 0; j < SIZE; j++){
+        gameService.setMove(1,i,j);
+      }
+    }
+
+    expect(gameService.checkEmpty()).toBe(false);
+  });
+
+
 
 
 
